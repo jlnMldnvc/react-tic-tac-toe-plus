@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script> -->
+  <!-- <style>
+    #root {
+      height: 50px;
+      border: 1px solid black;
+    }
+  </style> -->
+</head>
+
+<body>
+  <div id="root"></div>
+  <!-- <script>
+    //function hello() {
+    function hello(thing) {
+      //
+      //console.log(this);
+      //console.log(this + " says hello everybody");
+      //
+      console.log(this + " says hello " + thing);
+      //
+      //console.log("Hello " + thing);
+    }
+
+    //hello() // Window
+    //hello.call() // Window
+    //hello.call("Anna") // Anna says hello everybody
+    //
+    //hello.call("Jane", "world") // Jane says hello world
+    //
+    //hello("world")
+    //hello.call(window, "world")
+    //hello.call(undefined, "world")  // es5
+    //
+    /* (function () {
+      console.log(this);  // Window
+    })() */
+    //
+    /* var person = {
+       name: "John Doe",
+       hello: function (thing) {
+         console.log(this + " says hello " + thing);
+       }
+     }
+ 
+    person.hello("world") // Object says hello world
+     person.hello.call(person, "world")  // Object says hello world */
+    //
+    /* var person = {
+      name: "James Douglass"
+    }
+    person.hello = hello
+
+    person.hello("world")  // Object says hello world
+    hello("world")  // Window says hello world */
+    //
+    /* var boundHello = function (thing) {
+      return person.hello.call(person, thing)
+    }
+      
+    boundHello("world") // Object says hello world */
+    //
+    var person = {
+      name: "John Doe",
+      /* hello: function (thing) {
+        console.log(this.name + " says hello " + thing);
+      } */
+      hello: function () {
+        console.log(this.name + " says hello world");
+      }
+    }
+
+    /* var bind = function (func, thisValue) {
+      return function () {
+        return func.apply(thisValue, arguments)
+      }
+    }
+
+    var boundHello = bind(person.hello, person) */
+    //
+    //var boundHello = person.hello.bind(person)  // es5 Function.bind()
+    //
+    //boundHello("world") // John Doe says hello world
+    //
+    $("#root").click(person.hello.bind(person))
+  </script> -->
+</body>
+
+</html>
